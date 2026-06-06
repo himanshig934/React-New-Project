@@ -1,41 +1,52 @@
-import React from 'react'
-import cardimage from '../../images/gettyimages-2214991522-640x640.jpg';
+import React from 'react';
 
-export default function RightCards({items}) {
+export default function RightCards({ items, index }) {
   return (
-    <>
-      <div className='relative h-full flex justify-center items-center rounded-4xl shrink-0 overflow-hidden'>
+    <div
+      className=" relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-[280px] sm:w-[320px] md:w-[350px] lg:w-[380px]
+        flex justify-center
+        items-center rounded-4xl shrink-0 overflow-hidden">
 
-        {/* Image */}
-        <img src={items.URL} alt="" className='h-full w-full object-cover rounded-4xl'/>
 
-        {/* Overlay */}
-        <div className='absolute inset-0 bg-black/60 flex flex-col justify-between p-6 rounded-4xl'>
-          
-          {/* number */}
-          <div className='bg-white rounded-full h-10 w-10 justify-center items-center flex'>
-            <h1 className='text-black text-[20px] font-bold'>{items.number}</h1>
-          </div>
+      {/* Image */}
+      <img src={items.URL} alt=""
+        className="h-full w-full object-cover rounded-4xl"/>
 
-          {/* text */}
 
-          <div className='text-white leading-[28px]'>
-            <p>{items.text}</p>
-          </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60 flex flex-col justify-between p-4 sm:p-5 md:p-6 rounded-4xl">
+        
 
-            {/* button */}
-          <div className='justify-between text-sm'>
-          <button className='text-white rounded-full px-8 py-2' style={{backgroundColor: items.color}}>{items.button}</button>
-          <button className='text-white px-4 py-2 rounded-full' style={{backgroundColor: items.color}}><i class="ri-arrow-right-line"></i></button>
+        {/* Number */}
+        <div className="bg-white rounded-full h-8 w-8 sm:h-10 sm:w-10 flex justify-center items-center">
+          <h1 className="text-black text-base sm:text-xl font-bold">
+            {index + 1}
+          </h1>
         </div>
 
+
+        {/* Text */}
+        <div className="text-white">
+          <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-7">
+            {items.text}
+          </p>
+        </div>
+        
+
+        {/* Buttons */}
+        <div className="flex justify-between items-center gap-3">
+          <button style={{ backgroundColor: items.color }}
+            className="text-white rounded-full px-5 sm:px-6 md:px-8 py-2 text-xs sm:text-sm">
+            {items.button}
+          </button>
+
+          <button
+            className="text-white p-2 sm:px-4 sm:py-2 rounded-full"
+            style={{ backgroundColor: items.color }}>
+            <i className="ri-arrow-right-line"></i>
+          </button>
         </div>
       </div>
-    </>
-  )
+    </div>
+  );
 }
-
-
-
-
-
