@@ -5,7 +5,6 @@ import HeroBanner from './HeroBanner'
 export default function Herosection() {
   return (
     <div className='h-screen w-full'>
-      <Navbar/>
       <HeroBanner/>
     </div>
   )

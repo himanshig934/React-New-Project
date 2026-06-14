@@ -1,6 +1,10 @@
 import React from 'react'
 
 export default function HeroText() {
+
+//   localStorage.setItem('name', 'himanshi');
+
+
     return (
         <>
             <div className='heading font-bold lg:leading-[46px] leading-[30px] text-black'>
@@ -13,6 +17,7 @@ export default function HeroText() {
                     temporibus quaerat impedit alias facilis nulla aspernatur provident harum voluptatum ullam est ipsam consequuntur
                     delectus ea asperiores deleniti.</p>
             </div>
+
 
         </>
     )

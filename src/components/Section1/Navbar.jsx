@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -8,12 +9,12 @@ export default function Navbar() {
           
           {/* Left Side */}
           <div className="bg-gray-900 text-white text-[12px] px-4 py-2 rounded-full">
-            <button className='uppercase tracking-[2px]'>Target Audience </button>
+            <Link to ='/'><button className='uppercase tracking-[2px]'>Baack to Home </button></Link>
           </div>
 
           {/* Right Side */}
           <div className="bg-gray-300 text-gray-900 text-[12px] px-4 py-2 rounded-full">
-            <button className='uppercase tracking-[2px] font-[500]'>Digital banking platform </button>
+            <Link to ='/Notes'><button className='uppercase tracking-[2px] font-[500]'>Add the Notes </button></Link>
           </div>    
 
         </div>

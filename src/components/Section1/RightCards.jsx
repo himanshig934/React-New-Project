@@ -4,13 +4,11 @@ export default function RightCards({ items, index }) {
   return (
     <div
       className=" relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-[280px] sm:w-[320px] md:w-[350px] lg:w-[380px]
-        flex justify-center
-        items-center rounded-4xl shrink-0 overflow-hidden">
+        flex justify-center items-center rounded-4xl shrink-0 overflow-hidden">
 
 
       {/* Image */}
-      <img src={items.URL} alt=""
-        className="h-full w-full object-cover rounded-4xl"/>
+      <img src={items.URL} alt="" className="h-full w-full object-cover rounded-4xl"/>
 
 
       {/* Overlay */}
@@ -27,7 +25,7 @@ export default function RightCards({ items, index }) {
 
         {/* Text */}
         <div className="text-white">
-          <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-7">
+          <p className="text-[16px] sm:text-base md:text-lg leading-6 sm:leading-7">
             {items.text}
           </p>
         </div>
@@ -40,11 +38,14 @@ export default function RightCards({ items, index }) {
             {items.button}
           </button>
 
+
           <button
             className="text-white p-2 sm:px-4 sm:py-2 rounded-full"
             style={{ backgroundColor: items.color }}>
             <i className="ri-arrow-right-line"></i>
           </button>
+
+
         </div>
       </div>
     </div>
